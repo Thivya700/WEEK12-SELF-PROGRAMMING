@@ -1,0 +1,42 @@
+package exercise;
+
+public class PassingArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int marks[] = {55,67,89,47,77};
+		int sum, average, highMarks, indLargest;
+		
+		System.out.println("The number of subjects " + marks.length);
+		printMarks(marks);
+		sum = sumMarks(marks);
+		System.out.println("The sum of marks is " + sum);
+		average = sum/marks.length;
+		System.out.println("The average of marks is " + average);
+		indLargest = indexLargestElement (marks);
+		System.out.println("The highest marks is " + marks[indLargest]);
+
+	}
+	public static void printMarks(int[] allMarks) {
+		for(int i=0; i<allMarks.length; i++)
+			System.out.println(allMarks[i]+ " ");
+	}
+	
+	public static int sumMarks(int[] allMarks) {
+		int totalMarks = 0;
+		for(int i=0; i<allMarks.length; i++)
+			totalMarks = totalMarks + allMarks[i];
+		return totalMarks;
+	}
+	public static int indexLargestElement(int[] list)
+	{
+	         int index;
+	         int maxIndex = 0;
+	         for (index = 1; index < list.length; index++) {
+	        	 if(list[maxIndex] < list[index])
+	                    maxIndex = index;}
+	          return maxIndex;
+	} 	
+	
+
+}
